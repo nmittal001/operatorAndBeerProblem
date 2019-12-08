@@ -19,14 +19,14 @@
 
 This particular example represents this equation: 1 + (x \* 10) = 21
 
-#Goal is to:
+### Goal is to:
 
 1. Parse the JSON into a structured format, and written a function to pretty-print the parsed equation, in a single line with brackets, like the below example. (use a JSON parsing library) 1 + (x \* 10) = 21
 2. Transform the expression so that ‘x’ on one side, and all the operations on the other side. In this example, a transformed expression: x = (21 − 1) / 10 .
 3. Evaluate the expression on the other side and find the value of ‘x’.
    For input files, assumed that ‘x’ is always solvable.
 
-# Notes:
+### Notes:
 
 - The operations possible are: add, subtract, multiply, divide, and equal
 - Each operation will have a LHS and a RHS. The LHS / RHS of a operation can be:
