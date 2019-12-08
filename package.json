@@ -1,0 +1,16 @@
+{
+  "name": "equation",
+  "version": "1.0.0",
+  "description": "Evaluate the expression and find value of x",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Nitesh Kumar Mittal",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "fs": "0.0.1-security"
+  }
+}
