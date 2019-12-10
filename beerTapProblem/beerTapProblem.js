@@ -10,7 +10,11 @@ module.exports = {
         }
       }
       sum = this.sumOfDivisor(divisorTap);
-      let isSubsetSum = this.isSubsetSum();
+      let isSubsetSum = this.isSubsetSum(
+        divisorTap,
+        beerTap,
+        divisorTap.length
+      );
       if (sum > beerTap && !isSubsetSum) {
         console.log("Beer Tap Number-->>", beerTap);
       }
@@ -19,7 +23,19 @@ module.exports = {
   sumOfDivisor: function(divisorTap) {
     return divisorTap.reduce((a, b) => a + b, 0);
   },
-  isSubsetSum: function() {
-    return true;
+  isSubsetSum: function(divisorTap, beerTap, length) {
+    if (beerTap === 0) {
+      return true;
+    }
+    if (length === 0 && beerTap !== 0) {
+      return false;
+    }
+    if (divisorTap[length - 1] > beerTap) {
+      return this.isSubsetSum(divisorTap, beerTap, length - 1);
+    }
+    return (
+      this.isSubsetSum(divisorTap, beerTap, length - 1) ||
+      this.isSubsetSum(divisorTap, beerTap - divisorTap[length - 1], length - 1)
+    );
   }
 };
